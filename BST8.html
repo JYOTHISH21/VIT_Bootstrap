@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+        <style>
+          body {
+            height: 100%
+            
+          }  
+        </style>
+    </head>
+
+    <body>
+      
+        <div class="container">
+            <form class="row needs-validation" novalidate>
+              <div class="mb-3 col-12">
+                <label for="name" class="form-label">Username</label>
+                <input type="text" id="name" class="form-control" required />
+                    
+                <div class="invalid-feedback">
+                  Username is required
+                </div>
+              </div>              
+              <div class="mb-3 col-12">
+                <label for="email" class="form-label">Email address</label>
+
+                  <input type="email" class="form-control" id="email" required />
+                    
+                  <div class="invalid-feedback">
+                    E-mail address is required
+                  </div>
+              </div>
+              <div class="mb-3 col-12">
+                <label for="pwd" class="form-label">Password</label>
+                <input type="password" id="pwd" class="form-control" required />
+                    
+                <div class="invalid-feedback">
+                  Password is required
+                </div>
+              </div> 
+                                                    
+              <div class="mb-3 col-12">
+                <label for="hbs" class="form-label">Hobbies</label>
+                <select id="hbs" class="form-select">
+                  <option disabled selected value> </option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select> 
+              </div> 
+              
+  
+                <div class="col-12">
+                    <button class="btn btn-danger btn-block" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Optional JavaScript -->
+        <!-- Popper.js first, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+        
+        <script>
+            var forms = document.querySelectorAll('.needs-validation');
+            
+            Array.prototype.slice.call( forms ).forEach( function( form )
+            {
+                form.addEventListener( 'submit', function ( event )
+                {
+                    if ( !form.checkValidity( ) )
+                    {
+                        event.preventDefault( )
+                        event.stopPropagation( );
+                    }
+
+                    form.classList.add( 'was-validated' );
+              }, false );
+            } );
+        </script>
+    </body>
+</html>
